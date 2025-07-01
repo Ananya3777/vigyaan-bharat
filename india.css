@@ -1,377 +1,32 @@
+/* Reset default spacing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Responsive Layout */
 body {
-  background: #fdf6ec;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 10px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1C4966;
-  padding: 1rem 2rem;
-  color: white;
-}
-
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #b4a282;
-}
-
+/* Header */
 header {
+  background-color: #0a3d62;
+  color: white;
+  padding: 1.5rem 1rem;
   text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(to right, #D3D3D3, #928E85);
-  color: #1e2033;
-  font-family :fantasy;
-  
 }
 
 header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
-header p {
-  font-size: 1.2rem;
-}
-
-.hero-cards {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 3rem;
-  gap: 2rem;
-}
-.nav-links .nav-button {
-  background-color: #ffffff33; /* semi-transparent white */
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.nav-links .nav-button:hover {
-  background-color: #ffd180;
-  color: #1C4966;
-}
-.card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  width: 220px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-}
-
-.card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.card h2 {
-  padding: 1rem;
-  font-size: 1.5rem;
-  color: #A9A9A9;
-}
-
-.card p {
-  padding: 0 1rem 1rem;
-  font-size: 1rem;
-  color: #555;
-}
-
-.timeline {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.timeline-event {
-  background: white;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-left: 6px solid #e64a19;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.timeline-event h3 {
-  margin-bottom: 0.5rem;
-}
-
-.about-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.1rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-}
-/* Toggle Switch Styling */
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  border-radius: 34px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.4s;
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #333;
-}
-
-input:checked + .slider::before {
-  transform: translateX(24px);
-}
-
-
-
-    h1 {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 2.2rem;
-      color: #2e3a59;
-    }
-
-    .flip-card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 30px;
-    }
-
-    .flip-card {
-      background-color: transparent;
-      width: 260px;
-      height: 180px;
-      perspective: 1000px;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .flip-card-front {
-      background-color: #ffffff;
-      color: #2e3a59;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .flip-card-back {
-      background-color: #2e3a59;
-      color: #ffffff;
-      transform: rotateY(180deg);
-      font-style: italic;
-      font-size: 16px;
-    }
-
-    footer {
-      background-color: #2e3a59;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 15px;
-      margin-top: 50px;
-    }
-
-.museum-section {
-      padding: 60px 20px;
-      background-color: #f3e8d9;
-      text-align: center;
-    }
-
-    .museum-section h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .frame {
-      width: 200px;
-      height: 260px;
-      border: 8px solid #7b5d42;
-      background-color: #fff;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .frame:hover {
-      transform: scale(1.05);
-    }
-
-    .frame .caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 12px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      font-size: 14px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .frame:hover .caption {
-      opacity: 1;
-    }
-
-    .about-section {
-  padding: 40px;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.7;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.about-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #1C4966;
-}
-
-.about-section h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  color: #1C4966;
-}
-
-.about-section ul {
-  padding-left: 1.5rem;
-  list-style: disc;
-}
-
-.about-section p, .about-section li {
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
- @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  .navbar a {
-    padding: 10px;
-    font-size: 16px;
-  }
-   .card-container {
+/* Cards Container */
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -379,110 +34,70 @@ input:checked + .slider::before {
   padding: 1rem;
 }
 
+/* Individual Card */
 .card {
-  flex: 1 1 300px; /* Grow, shrink, base width */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
   max-width: 350px;
-  min-width: 250px;
-  box-sizing: border-box;
-  margin: 10px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
+
+.card:hover {
+  transform: scale(1.03);
+}
+
 .card img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.card h2, .card p {
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 1rem 0;
+  color: #0a3d62;
+}
+
+.card p {
   font-size: 1rem;
-  text-align: center;
+  margin: 0.5rem 1rem 1rem;
+  color: #333;
 }
 
-   @media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
   .card {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  header h1 {
-    font-size: 1.5rem;
-    padding: 10px;
+  .card h2 {
+    font-size: 1rem;
   }
 
   .card p {
     font-size: 0.9rem;
-    padding: 0 1rem;
   }
 }
 
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.2rem;
-  }
-
-  .card {
-    margin: 5px 0;
+    padding: 1rem 0.5rem;
   }
 
   .card h2 {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
   }
 }
-
-
-  .hero-cards,
-  .gallery,
-  .flip-card-container,
-  .timeline-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card,
-  .flip-card,
-  .frame,
-  .timeline-item {
-    width: 90% !important;
-    margin: 10px 0;
-  }
-
-  .card img,
-  .flip-card-front img {
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-  }
-
-  .card h2,
-  .flip-card-back h3,
-  .timeline-content h2 {
-    font-size: 18px;
-  }
-
-  .card p,
-  .flip-card-back p,
-  .timeline-content p {
-    font-size: 14px;
-  }
-
-  h1, h2 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .museum-gallery .frame {
-    height: auto;
-  }
-
-  .flip-card {
-    height: auto;
-  }
-
-  .flip-card-inner {
-    height: auto;
-  }
-
-  .footer {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-   
