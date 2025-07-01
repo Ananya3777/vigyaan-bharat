@@ -1,0 +1,21 @@
+.read-more-label {
+  display: block;
+  text-align: center;  
+  margin-top: 10px;
+  color: #0056b3;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.read-more-content {
+  display: none;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+
+.read-more-toggle:checked + .read-more-label + .read-more-content {
+  display: block;
+}
